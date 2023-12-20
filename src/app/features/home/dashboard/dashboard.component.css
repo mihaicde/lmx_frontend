@@ -1,0 +1,32 @@
+.userTitle{
+    font-size: 18px;
+    color: #000;
+    margin-left: 2%;
+}
+
+.courseImage{
+    width: 100%;
+    
+    height: 95%;
+
+}
+
+.genericDescription{
+    background-color: whitesmoke;
+    margin-right: 2%;
+}
+
+.subTitle{
+    margin-left: 2%;
+}
+
+.courseDescription{
+    margin-left: 2%;
+    font-size: 14px;
+}
+
+.cardRow{
+    margin: 1%;
+    margin-bottom: 5%;
+
+}

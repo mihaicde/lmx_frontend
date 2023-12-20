@@ -1,0 +1,83 @@
+<div class="background" fxLayout="column">
+    <div fxLayout="row" style="margin-top:5%">
+        <div fxLayout="column"  fxFlex="45%" class="initalDescription" >
+            <h1>
+                <img src="./../../../../assets/chopstix_ALB-05.png" alt="Logo" class="logo">
+                Chopskills
+            </h1>
+
+            <div fxLayout="column" *ngIf="initalSetup">
+                <h3 class="subTitle">{{titleDescription}}</h3>
+                <button mat-raised-button class="buttonWithTopSpace" >help me pick a carrer path</button>
+                <button mat-raised-button class="buttonWithTopSpace">accomplish a business goal</button>
+                <button mat-raised-button  class="buttonWithTopSpace">how to do a specific action</button>
+            </div>
+
+            <div fxLayout="column" *ngIf="!initalSetup">
+                <h3 class="subTitle">We are working on generating a carrer path for you</h3>
+                <circle-progress 
+                    [percent]="percent"
+                    [radius]="80"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="10"
+                    [outerStrokeColor]="'#79B791'"
+                    [innerStrokeColor]="'#C7E596'"
+                    [animation]="true"
+                    [startFromZero]="false"
+                    [animationDuration]="300"
+                    ></circle-progress>
+
+            </div>
+           
+        </div>
+        <div fxLayout="column" fxFlex="45%">
+            
+            <mat-form-field fxFlex="100%" class="inputForm" appearance="outline" [style.fontSize]="fontSize"  color="primary">
+                <mat-label [style.fontSize]="fontSize">{{typingText}}</mat-label>
+            
+                <input #inputField matInput type="text" class="textArea" [(ngModel)]="userInput" (keyup.enter)="onEnterPressed(inputField)" >
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="background" fxLayout="column" fxLayoutAlign="center ">
+    <div fxLayout="row" fxLayoutAlign="center ">
+        <mat-form-field class="inputForm" appearance="outline" [style.fontSize]="fontSize"  color="primary">
+            <mat-label [style.fontSize]="fontSize" >What do you want to do today?</mat-label>
+            <!-- <textarea matInput 
+            style="overflow:auto"
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="10"
+            class="textArea"
+            ></textarea> 
+            <input matInput type="text" class="textArea" >
+          </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center" class="button" >
+        <button mat-raised-button>submit your question</button>
+    </div> 
+     <div fxLayout="row" fxLayoutAlign="center center" >
+        <h3 style="color:white; font-weight: bold;">or</h3>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center" >
+        <button mat-raised-button class="buttonWithSpace" >help me pick a carrer path</button>
+        <button mat-raised-button class="buttonWithSpace">accomplish a business goal</button>
+        <button mat-raised-button  class="buttonWithSpace">how to do a specific action</button>
+    </div>
+</div> -->

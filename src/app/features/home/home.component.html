@@ -1,12 +1,25 @@
 
-<div class="column" fxFlex="100%" fxLayoutAlign="center" style="text-align:center;">
+<app-chat></app-chat>
 
-    <mat-form-field class="inputForm parent" appearance="outline" >
-        <mat-label >What is my question</mat-label>
-        <input matInput type="text" >
-        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
+
+<!-- navbar -->
+<div>
+    <mat-toolbar class="nav-bar">
+       
+        <!-- <span>Home</span> -->
+        <button mat-button (click)="scrollToBottom()">
+          Home
+        </button>       
+         <span class="spacer"></span>
+        <button mat-button (click)="scrollToTop()">Get inspired</button>
+        <span class="spacer"></span>
+        <button mat-button (click)="scrollToBottom()">Courses and stuff</button>
+        
+        
+      </mat-toolbar>
 </div>
+
+
+
+<app-dashboard></app-dashboard>
 

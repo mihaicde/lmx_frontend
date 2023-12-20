@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './shared/material/material.module';
+import { HomeComponent } from './features/home/home.component';
 
 @NgModule({
   declarations: [

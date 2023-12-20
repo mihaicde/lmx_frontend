@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,  } from '@angular/core';
+import {CdkTextareaAutosize, TextFieldModule} from '@angular/cdk/text-field';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  value = 'Clear me';
 
+  
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 }
+
